@@ -33,7 +33,11 @@ class Products {
 				marketPlace: products.marketPlace,
 				productDescription: products.productDescription,
 			});
-		} catch (error) {}
+		} catch (error) {
+			res.status(401).send({
+				message: "Error to Find Product",
+			});
+		}
 	}
 	async updateProducts(req, res) {
 		try {
